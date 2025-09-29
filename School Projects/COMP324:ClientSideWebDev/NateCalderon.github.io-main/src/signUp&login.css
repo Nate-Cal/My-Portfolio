@@ -1,0 +1,454 @@
+ /* set page color */
+ html {background-color: #1A1235}
+ h1 {
+   text-align: center;
+   color: #b6f0f3;
+   }
+ h3{
+    text-align: center;
+    color: blue
+  }
+ p{
+   text-align: center;
+   color: #b6f0f3;
+   font-size: large;
+ }
+ .topnav {
+   background-color: #69E490;
+   overflow: hidden;
+ }
+ 
+ /* Style the links inside the navigation bar */
+ .topnav a {
+   float: left;
+   color: blue;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 20px;
+ }
+ 
+ /* Change the color of links on hover */
+ .topnav a:hover {
+   background-color: lightsteelblue;
+   color: white;
+ }
+ 
+ /* Add a color to the active/current link */
+ .topnav a.active {
+   background-color: lightskyblue;
+   color: blue;
+ }
+ .dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ .align-right{
+  float: right;
+}
+
+ .container{
+   text-align: center;
+ }
+
+ .loginButton {
+   display: inline-block;
+   border-radius: 4px;
+   background-color: #003366;
+   border: none;
+   color: #b6f0f3;
+   text-align: center;
+   font-size: 20px;
+   padding: 5px;
+   margin: 5px;
+   cursor: pointer;
+ }
+
+ .logoutButton {
+  border-radius: 4px;
+  background-color: #003366;
+  border: none;
+  color: #b6f0f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.signUpButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #003366;
+  border: none;
+  color: #b6f0f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.updateNameButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #003366;
+  border: none;
+  color: #b6f0f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+ 
+ 
+ /* .button span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+ }
+ 
+ .button span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+ 
+ .button:hover span {
+   padding-right: 25px;
+ }
+ 
+ .button:hover span:after {
+   opacity: 1;
+   right: 0;
+ } */
+
+ .forms{
+    display: flex;
+    margin-top: 30px;
+ }
+ form {
+    background-color: #b6f0f3;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    font-size: 20px;
+  }    
+
+  .email {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .email::placeholder {
+    color: lightgray;
+  }
+
+  .password {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .password::placeholder {
+    color: lightgray;
+  }
+
+  .currentDisplayName{
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .currentDisplayName::placeholder {
+    color: lightgray;
+  }
+
+  .newDisplayName{
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .newDisplayName::placeholder {
+    color: lightgray;
+  }
+  
+  input[type=submit] {
+    background-color: #003366;
+    color: #b6f0f3;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  .loginButton:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+}
+
+  .logoutButton:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+}
+
+.signUpButton:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
+
+.updateNameButton:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.8, 1.0); }
+    50% { transform: scale(1.0, 0.8); }
+    75% { transform: scale(0.97, 1.08); }
+}
+
+  label{
+    color: blue;
+  }
+
+  img{
+    height: 180px;
+    width: 180px;
+  } 
+
+  .flex-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+  }
+  
+  .flex-container:hover{
+    animation: pulse 1s infinite ease-in-out alternate;
+  }
+
+  @keyframes pulse {
+    from { transform: scale(0.95); }
+    to { transform: scale(1.4); }
+  }
+
+  @media screen and (min-width: 1700px){
+    .topnav a {
+      font-size: 30px;
+    }
+  
+    h1 {
+        font-size: 60px;
+    }
+
+    form{
+      font-size: 25px;
+      height: 360px;
+      width: 450px;
+      margin-bottom: 2%;
+
+    }
+
+    .loginButton {
+      font-size: 25px;
+    }
+
+    .logoutButton {
+      font-size: 25px;
+    }
+
+    .signUpButton{
+      font-size: 25px;
+    }
+
+    .updateNameButton{
+      font-size: 25px;
+    }
+
+    .submit {
+      font-size: 20px;
+    }
+
+    .email::placeholder {
+      font-size: 20px;
+    }
+    
+    .email{
+      height: 30px;
+      width: 250px;
+    }
+
+    .password::placeholder {
+      font-size: 20px;
+    }
+
+    .password{
+      height: 30px;
+      width: 250px;
+    }
+
+    .currentDisplayName::placeholder {
+      font-size: 20px;
+    }
+
+    .currentDisplayName{
+      height: 30px;
+      width: 250px;
+    }
+
+    .newDisplayName::placeholder {
+      font-size: 20px;
+    }
+
+    .newDisplayName{
+      height: 30px;
+      width: 250px;
+    }
+
+
+    p{
+      font-size: 25px;
+    }
+
+    img{
+      height: 220px;
+      width: 220px;
+    } 
+
+    .flex-container{
+      margin-top: 2%;
+    }
+  }
+
+  @media screen and (max-width: 545px){
+
+    h1{
+      font-size: 15px;
+    }
+    
+    .dropdown{
+      display: inline-block;
+      margin-bottom: 0%;
+    }
+  
+    .topnav{
+      display: none;
+    }
+
+    img{
+      height: 60px;
+      width: 60px;
+    }
+
+    .flex-container{
+      margin-top: 0%;
+    }
+
+    form{
+      font-size: 8px;
+      height: 120px;
+      width: 150px;
+      margin-bottom: 2%;
+    }
+
+    .loginButton {
+      font-size: 7px;
+    }
+
+    .signUpButton{
+      font-size: 7px;
+    }
+
+    .logoutButton{
+      font-size: 7px;
+    }
+
+    .updateNameButton{
+      font-size: 7px;
+    }
+
+    .email::placeholder {
+      font-size: 7px;
+    }
+
+    .email{
+      height: 7px;
+      width: 80px;
+    }
+
+    .password::placeholder {
+      font-size: 7px;
+    }
+
+    .password{
+      height: 7px;
+      width: 80px;
+    }
+
+    .currentDisplayName::placeholder {
+      font-size: 7px;
+    }
+
+    .currentDisplayName{
+      height: 7px;
+      width: 80px;
+    }
+
+    .newDisplayName::placeholder {
+      font-size: 7px;
+    }
+
+    .newDisplayName{
+      height: 7px;
+      width: 80px;
+    }
+
+    p{
+      font-size: 8px;
+    }
+  }

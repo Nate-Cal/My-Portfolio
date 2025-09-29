@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="workoutPlanner.css">
+    <title>Workout Planner</title>
+  </head>
+  <body>
+    <h1>Workout Planner</h1>
+    <nav class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="sleepTracker.html">Sleep Tracker</a>
+      <a href="workoutPlanner.html">Workout Planner</a>
+      <a href="NutritionDataBase.html">Nutrition Database</a>
+      <a href="socialFeatures.html">Achieve and Share</a>
+      <a href="MeetTheTeam.html">Meet the Team!</a>
+      <a href="signUp&login.html">Login or Sign Up</a>
+      <div class="align-right">
+        <a href="worksCited.html" class="worksCited" >Works Cited</a>
+      </div>
+    </nav>
+    <nav class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="sleepTracker.html">Sleep Tracker</a>
+        <a href="workoutPlanner.html">Workout Planner</a>
+        <a href="NutritionDataBase.html">Nutrition Database</a>
+        <a href="socialFeatures.html">Achieve and Share</a>
+        <a href="MeetTheTeam.html">Meet the Team!</a>
+        <a href="signUp&login.html">Login or Sign Up</a>
+        <a href="worksCited.html" class="worksCited" >Works Cited</a>
+      </div>
+    </nav>
+    <header class="showMessage">
+      <br>
+      <h2>Click show if you would like to show the BMI information</h2> 
+      <button class="show" onClick="showBMI()">Show</button>
+      <button class="button" onClick="showImperial()">Imperial</button>
+      <button class ="button" onClick="showMetric()">Metric</button>
+      <br><br>
+    </header>
+    <main class="flex-container">
+      <form name="BMIformImperial" action="" method="GET">
+        <h3>BMI Calculator</h3>
+        <h4>Height</h4>
+        <label for="feet">Feet</label>
+        <input type="text" placeholder="Feet" name="feetInput" value="">
+        <label for="inches">Inches</label>
+        <input type="text" placeholder="Inches" name=inchesInput value="">
+        <br>
+        <h4>Weight</h4>
+        <label for="pounds">Pounds</label>
+        <input type="text" placeholder="Pounds" name="poundsInput" value="">
+        <br><br>
+        <input type="button" value="Calculate" onClick="BMIcalculatorImperial(this.form)">
+        <br>
+      </form>
+      <form name="BMIformMetric" action="" method="GET">
+        <h3>BMI Calculator</h3>
+        <h4>Height</h4>
+        <label for="centimeters">Centimeters</label>
+        <input type="text" placeholder="Centimeters" name="centimeterInput" value="">
+        <br>
+        <h4>Weight</h4>
+        <label for="kilograms">Kilograms</label>
+        <input type="text" placeholder="Kilograms" name="kilogramInput" value="">
+        <br><br>
+        <input type="button" value="Calculate" onClick="BMIcalculatorMetric(this.form)">
+        <br>
+      </form>
+        <form name="stepform" action="" method="GET">
+          <h3>Step Counter</h3>
+          <label for="steps">Steps Walked</label>
+          <input type="text" placeholder="Steps"  name="stepInput" value="">
+          <input type="button" value="Log" onClick="stepCounter(this.form)">
+          <br>
+          <img id="shoes" src="https://i.pinimg.com/originals/11/c9/fa/11c9fa859c9e9402067f03054e62ea57.png" alt="Running shoes">
+      </form>
+      <br>
+      <form name="workoutForm" action="" method="GET">
+        <h3>What type of workout are you interested in</h3>
+        <label for="buildMuscle">Build Muscle</label>
+        <input type="radio" name="workout" id=buildMuscle value="">
+        <label for="loseWeight">Lose Weight</label>
+        <input type="radio" name="workout" id=loseWeight value="">
+        <label for="buildEdurance">Build Endurance</label>
+        <input type="radio" name="workout" id=buildEndurance value="">
+        <br><br>
+        <button class="submit" type="button" onClick="getRadioValue()">Submit</button>
+        <br>
+        <img id="weights" src="https://cdn3.iconfinder.com/data/icons/sport-40/1772/Vinyl_Dumbbells_Aerobics_Fitness_Exercise-512.png" alt="Weights">
+      </form>
+    </main>
+    <aside class="messages">
+      <br>
+      <h2 id="BMIvalue"></h2>
+      <br><br>
+      <h2 id="stepValue"></h2>
+    </aside>
+    <section class= "workout-container">
+      <article class="videoContainer" id = "buildMuscleVideos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GViX8riaHX4?si=h4rV1BqnqHTboqkF" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/geK9GNKGRpo?si=a3by2kwUoguXHR8n" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SjSJU-LOLf8?si=PfOfrOW4mTIzcSru" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0zNBpGCb8?si=hfToz5s1TMFJSuh9" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </article>
+      <article class="videoContainer" id = "loseWeightVideos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eW71SoYXDK8?si=puMSPsek_C1YkaNR" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kg5hXfcVm6g?si=mS2269pGvGxxIFIQ" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5YR2E-3pvy8?si=L46INuhbMGXM4Hq3" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-n2SOnyr1Y?si=B9CTF432fv7Dxaqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </article>
+      <article class="videoContainer" id = "buildEnduranceVideos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhn9no7tAo?si=Pr3w1xC5rRPkWcBy" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fr3LlLe0V8?si=ino7R6S233nDQ7eE" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RF_YiV3LA58?si=88P7v1R3_AOj1YSk" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h4r7mO61pkE?si=ajPRqdGxNkK1sKIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </article>
+    </section>
+    <script src="workoutPlannerJS.js"></script>
+  </body>
+</html>
+<!--contains stepCounter-->

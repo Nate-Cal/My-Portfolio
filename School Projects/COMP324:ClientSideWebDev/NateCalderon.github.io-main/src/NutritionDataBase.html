@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>  
+<head>
+  <link rel="stylesheet" href="NutritionDataBaseStyle.css">
+ <title>Nutrition Database</title>
+  </head>
+  <body>
+    <h1>Nutrition Database</h1>
+    <nav class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="sleepTracker.html">Sleep Tracker</a>
+      <a href="workoutPlanner.html">Workout Planner</a>
+      <a href="NutritionDataBase.html">Nutrition Database</a>
+      <a href="socialFeatures.html">Achieve and Share</a>
+      <a href="MeetTheTeam.html">Meet the Team!</a>
+      <a href="signUp&login.html">Login or Sign Up</a>
+      <div class="align-right">
+        <a href="worksCited.html" class="worksCited" >Works Cited</a>
+      </div>
+    </nav>
+    <nav class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="sleepTracker.html">Sleep Tracker</a>
+        <a href="workoutPlanner.html">Workout Planner</a>
+        <a href="NutritionDataBase.html">Nutrition Database</a>
+        <a href="socialFeatures.html">Achieve and Share</a>
+        <a href="MeetTheTeam.html">Meet the Team!</a>
+        <a href="signUp&login.html">Login or Sign Up</a>
+        <a href="worksCited.html" class="worksCited" >Works Cited</a>
+      </div>
+    </nav>    
+    <section id="food entry">
+      <p2>
+          <h3>Enter your Food Intake from Today</h3>
+          <div id="foodInput">
+            <input type="text" id="food" placeholder="Enter food">
+            <button class="search" onclick="fetchData()">Search</button><br>
+          </div>
+            <div id="results-container"></div>
+            <h3>Selected Items:</h3>
+            <ul id="selected-items"></ul>
+            <script src="NutritionDataBaseJS.js"></script>
+            <p id="total-calories">Total Calories: 0</p>
+            <div id="enterDetails">
+              <h3>Submit Data</h3>
+              <button class="search" id="submitData">Submit</button>
+            </div>
+            <h3>Enter your Water Intake from Today</h3>
+            <div class="water">
+              <input type="text" id="enterWater" placeholder="Water by fl oz">
+              <button class="log" id="submitWater">Log</button>
+            </div>
+      </p2>
+      <p3>
+        <form name = "waterForm">
+        <!-- <label for="water">Water by fl oz</label> -->
+        
+        </form> 
+    </p3>
+    </section>
+<section2>
+
+  <!--
+  <figure1>
+    <img src= "" alt="PlaceHolder" width="200px" height="200px">
+    <figcaption>Graph presenting Caloric intake over time</figcaption>
+  </figure1> -->
+</section2>
+<!-- <script src="NutritionDataBaseJS.js"></script> -->
+  </body>
+  <footer>
+     <div class="container">
+      <button onClick="window.location.href='workoutPlanner.html'" class="button" style="vertical-align:middle"><span>Proceed to Workout Plan</span></button>
+    </div>
+  </footer>
+  
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB_vZta6FIMoSPYkqhS2ljRjjEjAiQ6qxg",
+      authDomain: "health-tracker-dbc6d.firebaseapp.com",
+      databaseURL: "https://health-tracker-dbc6d-default-rtdb.firebaseio.com",
+      projectId: "health-tracker-dbc6d",
+      storageBucket: "health-tracker-dbc6d.appspot.com",
+      messagingSenderId: "164968132870",
+      appId: "1:164968132870:web:68aa1101d18ca26deeae87",
+      measurementId: "G-W4LRQT3X59"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    import {getDatabase, set, get, update, remove, ref, child} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+    const db = getDatabase();
+    var submitDatax = document.querySelector("#submitData");
+    var enterWaterx = document.querySelector("#enterWater");
+    var submitWaterx = document.querySelector("#submitWater");
+
+    function submitData() {
+        const itemList = document.getElementById('selected-items');
+        var x = 1;
+        itemList.childNodes.forEach(item => {
+          set(ref(db, "/nutrition/item " + x + "/"),{
+            value: item.textContent
+          });
+          x++;
+        });
+    }
+    function submitWater() {
+        set(ref(db, "/nutrition/water/"), {
+          amount: enterWaterx.value + " fl oz"
+        })
+    }
+    submitDatax.addEventListener('click', submitData);
+    submitWaterx.addEventListener('click', submitWater);
+  </script>
+</html>
+<!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
+        I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
+<!--contains calorieTracker and waterIntake-->
+

@@ -1,0 +1,373 @@
+ /* set page color */
+html {
+  background-color: #1A1235;
+}
+
+h1 {
+  text-align: center;
+  color: #b6f0f3;
+ }
+
+h2{
+  color: blue;
+}
+
+h4{
+  color: white;
+}
+
+/* p{ 
+  text-align: center;
+  color: lightblue;
+  font-size: large;
+} */
+
+.topnav {
+  background-color: #69E490;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightskyblue;
+  color: blue;
+}
+
+
+.dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.align-right{
+  float: right;
+}
+
+.container{
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #b6f0f3;
+  border: none;
+  color: blue;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: column;
+  width: 200px;
+  height: 500px;
+  flex-wrap: wrap;
+}
+
+.chart{
+  background-color: lightblue;
+  height: 160px;
+  width: 200px;
+}
+
+.plate{
+  background-color: lightskyblue;
+  height: 160px;
+  width: 200px;
+}
+
+.swimming{
+  background-color: lightsteelblue;
+  height: 160px;
+  width: 200px
+}
+
+.logo{
+  margin-left: 350%;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+}
+
+img{
+  height: 500px;
+  width: 500px;
+}
+
+#chart{
+  height: 140px;
+  width: 140px;
+  margin-left: 33px;
+}
+
+#chart:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#plate{
+  height: 140px;
+  width: 180px;
+  margin-left: 10px;
+}
+
+#plate:hover {
+  animation-name: bounce;
+  animation-duration: 0.7s;
+}
+
+@keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-32px);}
+	60% {transform: translateY(-17px);}
+}
+
+#swimming{
+  height: 140px;
+  width: 200px;
+}
+
+#swimming:hover{
+  animation-name: wobble;
+  animation-duration: 0.7s;
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-25%) rotate(-5deg); }
+  30% { transform: translateX(20%) rotate(3deg); }
+  45% { transform: translateX(-15%) rotate(-3deg); }
+  60% { transform: translateX(10%) rotate(2deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+@media screen and (min-width: 1700px){
+
+  .flex-container{
+    width: 300px;
+    height: 1000px;
+  }
+  img{
+    height: 700px;
+    width: 700px;
+  }
+
+  .chart{
+    height: 260px;
+    width: 300px;
+  }
+  
+  .plate{
+    height: 260px;
+    width: 300px;
+  }
+  
+  .swimming{
+    height: 260px;
+    width: 300px
+  }
+
+  #chart{
+    height: 240px;
+    width: 240px;
+    margin-left: 33px;
+  }
+  
+  #plate{
+    height: 230px;
+    width: 280px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #swimming{
+    height: 240px;
+    width: 300px;
+  }
+
+  .logo{
+    margin-left: 250%;
+  }
+
+  .altLogo{
+    display: none;
+  }
+
+  .button {
+    font-size: 35px;
+    width: 230px;
+  }
+
+  .topnav a {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 545px){
+
+  h1{
+    font-size: 20px;
+  }
+  .dropdown{
+    display: inline-block;
+  }
+
+  .topnav{
+    display: none;
+  }
+  
+  .button{
+    display: none;
+  }
+
+  .flex-container{
+    height: 150px;
+  }
+
+  .chart{
+    background-color: lightblue;
+    height: 50px;
+    width: 60px;
+  }
+  
+  .plate{
+    background-color: lightskyblue;
+    height: 50px;
+    width: 60px;
+  }
+  
+  .swimming{
+    background-color: lightsteelblue;
+    height: 50px;
+    width: 60px
+  }
+  
+  .logo{
+    margin-left: 80%;
+  }
+
+  #chart{
+    height: 50px;
+    width: 50px;
+    margin-left: 10%;
+  }
+
+  #plate{
+    height: 50px;
+    width: 60px;
+    margin-left: 0%;
+  }
+
+  #swimming{
+    height: 50px;
+    width: 60px;
+  }
+
+  .person{
+    height: 150px;
+    width: 150px;
+  }
+}

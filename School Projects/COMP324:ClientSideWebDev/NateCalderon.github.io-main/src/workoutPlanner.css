@@ -1,0 +1,345 @@
+html{
+    background-color: #1A1235;
+  }
+
+  h1{
+    text-align: center;
+    color: #b6f0f3;
+  }
+
+  h2{
+    color: #b6f0f3;
+    display: inline;
+  }
+
+  h3{
+    text-align: center;
+    color: blue
+  }
+
+  h4{
+    text-align: center;
+    color: blue;
+  }
+
+  .topnav {
+    background-color: #69E490;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: lightsteelblue;
+    color: white;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: lightskyblue;
+    color: blue;
+  }
+
+  .dropbtn {
+    background-color: lightskyblue;
+    color: blue;
+    padding: 5px;
+    font-size: 10px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: none;
+    margin-bottom: 5%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #69E490;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: blue;
+    padding: 4px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: lightsteelblue;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .align-right{
+    float: right;
+  }
+  
+  p {
+    color: #b6f0f3;
+  }
+
+  .showMessage{
+    text-align: center;
+  }
+
+  .showButton{
+    text-align: left;
+  }
+
+  .show{
+    background-color: #b6f0f3;
+    color: blue; 
+    padding: 5px;
+  }
+
+  .show:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  form {
+    background-color: lightskyblue;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    font-size: 16px;
+  }    
+
+  input[type=text] {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 50px;
+  }
+  
+  input[type=button] {
+    background-color: #003366;
+    color: #b6f0f3;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  input[type=button]:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.8, 1.0); }
+    50% { transform: scale(1.0, 0.8); }
+    75% { transform: scale(0.97, 1.08); }
+  }
+
+  .submit {
+    background-color: #003366;
+    color: #b6f0f3;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  .submit:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  .buttonContainer{
+    text-align: left;
+  }
+
+  .button{
+    background-color: #b6f0f3;
+    color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .button:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  label{
+    color: blue;
+  }
+
+  img{
+    height: 180px;
+    width: 180px;
+    animation: bounce-in-right 2s ease;
+  }
+
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-32px);
+    }
+    80% { transform: translateX(12px); }
+    100% { transform: translateX(0); }
+  }
+  
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .messages{
+    text-align: center;
+  }
+
+  .workout-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  iframe{
+    border-color: #69E490;
+    border-width: 3px;
+  }
+
+  @media screen and (min-width: 1700px){
+
+    .topnav a {
+      font-size: 30px;
+    }
+  
+    h1 {
+      font-size: 60px;
+    }
+
+    form{
+      width: 500px; 
+      height: 370px; 
+      font-size: 22px
+    }
+
+    input[type=button] {
+      font-size: 20px;
+    }
+    .submit {
+      font-size: 20px;
+    }
+
+    input[type=text]::placeholder {
+      font-size: 20px;
+    }
+
+    input[type=text]{
+      height: 30px;
+      width: 70px;
+      font-size: 20px;
+    }
+
+    h2{
+      font-size: 30px;
+    }
+
+    .show{
+      font-size: 20px;
+    }
+
+    .button{
+      font-size: 20px;
+    }
+
+    #shoes{
+      height: 220px;
+      width: 220px;
+    }
+  }
+
+  @media screen and (max-width: 545px){
+    h1{
+      font-size: 20px;
+    }
+    
+    h2{
+      font-size: 12px;
+    }
+
+    .dropdown{
+      display: inline-block;
+    }
+  
+    .topnav{
+      display: none;
+    }
+
+    .show{
+      font-size: 8px;
+      padding: 3px;
+    }
+
+    .button{
+      font-size: 8px;
+    }
+
+    form{
+      width: 200px; 
+      height: 160px; 
+      font-size: 8px;
+      border: 3px solid #b6f0f3
+    }
+
+    input[type=button] {
+      font-size: 6px;
+      padding: 3px;
+    }
+
+    .submit {
+      font-size: 6px;
+      padding: 3px;
+    }
+
+    input[type=text]::placeholder {
+      font-size: 6px;
+    }
+
+    input[type=text]{
+      height: 6px;
+      width: 32px;
+    }
+
+    input[type=radio]{
+      width: 8px;
+      height: 8px;
+    }
+
+    img{
+      height: 80px;
+      width: 80px;
+    }
+
+    iframe{
+      width: 220px;
+      height: 150px;
+    }
+  }  

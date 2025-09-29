@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="socialFeatures.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Social Features</title>
+
+    </head>
+    <body>
+        <section id="header">
+            <h1>Achieve, Share, and Connect!</h1>
+            <nav class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="sleepTracker.html">Sleep Tracker</a>
+                <a href="workoutPlanner.html">Workout Planner</a>
+                <a href="NutritionDataBase.html">Nutrition Database</a>
+                <a href="socialFeatures.html">Achieve and Share</a>
+                <a href="MeetTheTeam.html">Meet the Team!</a>
+                <a href="signUp&login.html">Login or Sign Up</a>
+                <div class="align-right">
+                  <a href="worksCited.html" class="worksCited" >Works Cited</a>
+                </div>
+              </nav>
+              <nav class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                  <a href="sleepTracker.html">Sleep Tracker</a>
+                  <a href="workoutPlanner.html">Workout Planner</a>
+                  <a href="NutritionDataBase.html">Nutrition Database</a>
+                  <a href="socialFeatures.html">Achieve and Share</a>
+                  <a href="MeetTheTeam.html">Meet the Team!</a>
+                  <a href="signUp&login.html">Login or Sign Up</a>
+                  <a href="worksCited.html" class="worksCited" >Works Cited</a>
+                </div>
+              </nav>
+            <h2>Compete in challenges, share your achievements, and attain your fitness goals!</h2>
+        </section>
+
+        <section id = "challenges">
+            <h3>Current Challenges</h3>
+            <div class = "challenge-list">
+
+                <!--Challenge 1-->
+                <div class = "challenge-item">
+                    <h4>10,000 Steps in a Day</h4>
+                    <p>Walk 10,000 steps today to complete this challenge!</p>
+                    <button class="challenge-button" onclick="completeChallenge(this, '10,000 Steps Challenge Trophy')">Mark if you completed this challenge</button>
+                </div>
+
+                <!--Challenge 2-->
+                <div class="challenge-item">
+                    <h4>Login for a Week Straight</h4>
+                    <p>Login daily for at least 7 days to complete!</p>
+                    <button class="challenge-button" onclick="completeChallenge(this, 'Week Login Challenge Trophy')">Mark if you completed this challenge</button>
+                </div>
+
+                <!--Challenge 3-->
+                <div class="challenge-item">
+                    <h4>Achieve your Goal BMI</h4>
+                    <p>Reach your BMI goal within your initial timeframe!</p>
+                    <button class="challenge-button" onclick="completeChallenge(this, 'Goal BMI Challenge Trophy')">Mark if you completed this challenge</button>
+                </div>
+
+                <!--Challenge 4-->
+                <div class="challenge-item">
+                    <h4>Custom Workout Plan</h4>
+                    <p>Create your own personal workout plan!</p>
+                    <button class="challenge-button" onclick="completeChallenge(this, 'Personal Workout Plan Challenge Trophy')">Mark if you completed this challenge</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h3>Your Achievements</h3>
+            <div id="achievements-container"></div>
+        </section>
+
+
+        <section id="forum">
+            <h3>Forum</h3>
+            <div id="post-forum">
+                <input type = "text" id = "post-title" placeholder = "Title">
+                <textarea id = "post-content" placeholder = "Post something..."></textarea>
+                <button onclick = "createPost()">Post</button>
+            </div>
+            <div id="posts-container"></div>
+        </section>
+
+        <script src="socialFeatureJS.js"></script>
+
+        <footer></footer>
+    </body>
+</html>

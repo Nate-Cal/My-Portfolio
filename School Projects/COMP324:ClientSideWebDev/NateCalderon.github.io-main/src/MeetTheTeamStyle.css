@@ -1,0 +1,183 @@
+html { 
+  background-color: #1A1235;
+}
+
+h1 {
+  text-align: center;
+  color: #b6f0f3;
+ }
+
+h2{
+  text-align: center;
+  color: #b6f0f3;
+}
+
+h3{
+  text-align: center;
+  color: #b6f0f3;
+}
+
+h4{
+  color: #b6f0f3;
+}
+
+p{
+  text-align: center;
+  color: #b6f0f3;
+  font-size: large;
+}
+
+.topnav {
+  background-color: #69E490;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightskyblue;
+  color: blue;
+}
+
+.dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.align-right{
+  float: right;
+}
+
+.images{
+  display: flex;
+  flex-direction: row;
+  margin-top: 110px;  
+  justify-content: center;
+}
+
+.image1{
+  border: 5px solid #b6f0f3;
+}
+
+.image2{
+  border: 5px solid #b6f0f3;
+}
+
+.image3{
+  border: 5px solid #b6f0f3;
+}
+
+.image4{
+  border: 5px solid #b6f0f3;
+}
+
+.image5{
+  border: 5px solid #b6f0f3;
+}
+
+@media screen and (min-width: 1700px){
+  .topnav a {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2{
+    font-size: 35px;
+  }
+
+  h3{
+    font-size: 25px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  img{
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 545px){
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 12px;
+  }
+
+  h3{
+    font-size: 10px;
+  }
+
+  .dropdown{
+    display: inline-block;
+  }
+
+  .topnav{
+    display: none;
+  }
+
+  img{
+    height: 85px;
+    width: 85px;
+  }
+
+  .images{
+    margin-top: 5%;
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracker</title>
+    <link rel="stylesheet" href="sleepTracker.css">
+    <script src="https://kit.fontawesome.com/f764e7bfb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Sleep Tracker</h1>
+    </header>
+    <nav class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="sleepTracker.html">Sleep Tracker</a>
+        <a href="workoutPlanner.html">Workout Planner</a>
+        <a href="NutritionDataBase.html">Meal Planner</a>
+        <a href="socialFeatures.html">Achieve and Share</a>
+        <a href="MeetTheTeam.html">Meet the Team!</a>
+        <a href="signUp&login.html">Login or Sign Up</a>
+        <div class="align-right">
+            <a href="worksCited.html" class="worksCited">Works Cited</a>
+        </div>
+    </nav>
+    <nav class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="sleepTracker.html">Sleep Tracker</a>
+          <a href="workoutPlanner.html">Workout Planner</a>
+          <a href="NutritionDataBase.html">Nutrition Database</a>
+          <a href="socialFeatures.html">Achieve and Share</a>
+          <a href="MeetTheTeam.html">Meet the Team!</a>
+          <a href="signUp&login.html">Login or Sign Up</a>
+          <a href="worksCited.html" class="worksCited" >Works Cited</a>
+        </div>
+    </nav>  
+    <div class="content-container">
+        <section class="sleep-log">
+            <h2>Log Daily Sleep Hours</h2>
+            <div class="month-container">
+                <label class="header" for="monthSelector">Select Month:</label>
+                <select class="month header" id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
+                    
+                </select>
+            </div>
+            <div id="dailySleepInputs" class="dailySleepInputs">
+                
+            </div>
+            <button class="calculate" type="button" onclick="calculateSleep()">Calculate</button>
+            <div id="sleepStats">
+                <h2>Average Sleep This Month: <span id="averageSleep">0</span> hours</h2>
+                <h2>Total Sleep This Month: <span id="totalSleepMonth">0</span> hours</h2>
+                <h2>Total Sleep This Year: <span id="totalSleepYear">0</span> hours</h2>
+            </div>
+            <div class="sleep-recommendations">
+                <h2>Daily sleep recommendation by age:</h2>
+                <ul>
+                    <li>Newborns: 14-17 hours</li>
+                    <li>Infants: 12-15 hours</li>
+                    <li>Toddlers: 11-14 hours</li>
+                    <li>Pre-Schoolers: 10-13 hours</li>
+                    <li>School-Aged Children: 9-11 hours</li>
+                    <li>Teenagers: 8-10 hours</li>
+                    <li>Young Adults: 7-9 hours</li>
+                    <li>Adults: 7-9 hours</li>
+                    <li>Older Adults (65+): 7-8 hours</li>
+                </ul>
+            </div>
+          </section>
+          <section class="video-options">
+            <h3><i class="fa-solid fa-bed"></i> Videos to Help With Sleep:</h3>
+              <form id="videoOptionsForm">
+                  <label>
+                      <input type="radio" name="videoType" value="tips" checked> Sleep Tips
+                  </label>
+                  <label>
+                      <input type="radio" name="videoType" value="relaxing"> Relaxing Videos
+                  </label>
+                  <button type="button" onclick="showVideos()">Submit</button>
+              </form>
+              <div id="videoContainer"></div>
+          </section>
+          <section class="sleep-goal">
+            <h3><i class="fa-solid fa-bullseye"></i> Set Your Sleep Goal For This Month:</h3>
+            <form id="sleepGoalForm">
+                <label for="sleepGoalInput">Average Sleep Hours:</label>
+                <input type="number" class="goalInput" id="sleepGoalInput" name="sleepGoal" min="0" max="24" placeholder="e.g., 8">
+                <button type="button" onclick="logSleepGoal()">Log</button>
+            </form>
+            <div id="sleepGoalMessage"></div>
+        </section>        
+      </div>
+      <script src="sleepTrackerJS.js"></script>
+  </body>
+  </html>

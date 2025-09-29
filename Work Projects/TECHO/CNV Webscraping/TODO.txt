@@ -1,0 +1,61 @@
+EZ PART:
+Download csv file ✓
+Read csv file ✓
+Return information into document ✓
+
+Function to open webpage ✓
+
+Function to Click Buttons ✓
+
+Function to parse info from csv file and store ✓
+
+Function to paste into sheet ✓
+
+IMPROVEMENTS: 
+Duplicate handling ✓
+
+csv contains:
+    Date
+    Time
+    Name
+    Email
+    Phone #
+
+need to grab:
+    DNI
+    Province
+    DOB
+
+HARD PART:
+
+GRABBING DNI, PROVINCE, DOB, AND CALCULATING AGE
+
+Complexity:
+
+Function to open webpage ✓
+TWO SEPERATE PROGRAMS ✓
+    1) LOGIN AND RETRIEVE COOKIES ✓
+    2) RUN AND READ ✓
+
+Function to locate tag
+- recursively parse thru page to locate required elements? 
+    - this has to accomodate every entry, move onto next line, loop it
+
+Function to store information ✓
+
+Function to open Sheet ✓
+- Locate containers and place each object in its respective container ✓
+
+Function to paste information ✓
+
+Catch and Omit:
+1) Provincias where TECHO is not present
+2) Ages 35+
+
+
+
+RUN ALL AT ONCE
+
+OPERATES AUTOMATICALLY 3 TIMES A DAY
+7 AM 12 PM 7 PM
+

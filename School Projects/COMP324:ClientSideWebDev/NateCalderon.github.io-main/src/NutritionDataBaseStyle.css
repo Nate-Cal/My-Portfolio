@@ -1,0 +1,338 @@
+html{
+  background-color: #1A1235;
+}
+h1{
+  text-align: center;
+  color: #b6f0f3;
+}
+h2{
+  text-align: center;
+  color: #b6f0f3;
+}
+h3{
+  text-align: center;
+  color: #b6f0f3;
+}
+
+h4{
+  color: #b6f0f3;
+}
+
+.topnav {
+  background-color: #69E490;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightskyblue;
+  color: blue;
+}
+
+.dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}  
+
+.align-right{
+  float: right;
+}
+
+.container{
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #b6f0f3;
+  border: none;
+  color: blue;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+ */
+
+form {
+    /* background-color: lightskyblue; */
+    text-align: center;
+    /* width: 400px;
+    height: 300px;
+    margin: auto; */
+  }    
+
+
+p1{
+  text-align: center;
+  color: #b6f0f3;
+  font-size: large;
+}
+
+p2{
+  text-align: center;
+  color: white;
+}
+
+input[type=radio] {
+  background-color: #3CBC8D;
+  color: white;
+}
+
+/*.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+ */
+.messages{
+  text-align: center;
+}
+
+foodInput{
+  text-align: center;
+}
+
+input[type=text]{
+  color: blue;
+}
+
+.select{
+  font-size: 12px;
+  padding: 5px;
+  background-color: #b6f0f3;
+  color: blue;
+  border-radius: 4px;
+}
+
+.search{
+  font-size: 15px;
+  color: blue;
+  background-color: #b6f0f3;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.log{
+  font-size: 15px;
+  color: blue;
+  background-color: #b6f0f3;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.search:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
+.log:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
+.select:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.8, 1.0); }
+  50% { transform: scale(1.0, 0.8); }
+  75% { transform: scale(0.97, 1.08); }
+}
+
+
+@media screen and (min-width: 1700px){
+  .topnav a {
+    font-size: 30px;
+  }
+    
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2{
+    font-size: 35px;
+  }
+
+  h3{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 35px;
+    width: 480px;
+  }
+
+  form{
+    font-size: 25px;
+  }
+
+  input[type=text]{
+    font-size: 25px;
+  }
+
+  .search{
+    font-size: 25px;
+  }
+
+  .log{
+    font-size: 25px;
+  }
+
+  .select{
+    font-size: 20px;
+  }
+
+  .search{
+    font-size: 25px;
+  }
+  
+  .log{
+    font-size: 25px;
+  }  
+
+  #selected-items{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 545px){
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 15px;
+  }
+
+  .dropdown{
+    display: inline-block;
+  }
+
+  .topnav{
+    display: none;
+  }
+
+  p{
+    font-size: 10px;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 200px;
+    padding: 10px;
+  }
+
+  form{
+    font-size: 11px;
+  }
+
+  input[type=text]{
+    font-size: 11px;
+  }
+
+  .search{
+    font-size: 10px;
+  }
+
+  .log{
+    font-size: 10px;
+  }
+
+  .select{
+    font-size: 20px;
+  }
+}
+  
