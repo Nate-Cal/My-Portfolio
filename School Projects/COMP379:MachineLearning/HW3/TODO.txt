@@ -1,0 +1,38 @@
+Remember that you are looking for a classification (rather than regression) task.
+When you have selected the dataset, download it and think about whether you
+need to do some pre-processing (e.g. convert categorical attributes to numerical
+values, do the standartization/normalization). Now split it into training (70%),
+development (15%) and test (15%) sets. Finally, think about what the most
+appropriate evaluation metric is for your dataset (e.g. accuracy vs. F1 score).
+Here are the specifics of what needs to be done:
+
+1. Use either logistic regression or SVM classifiers from scikit-learn to train
+a classifier. Use the default classifier hyperparameters. Evaluate your
+classifier on the development set.
+
+2. Now explore the classifier hyperparameters and see if you can improve
+your model’s performance on the development set.
+
+3. Implement your own k-nearest neighbors classifier (KNN) from scratch.
+Tune the k value to achive the best possible performance on the development
+set. Note: you have to write your own implementation of the KNN
+algorithm; using the scikit-learn implementation is not acceptable for this
+assignment.
+
+4. To establish the performance of a baseline system, apply the DummyClassifier from scikit-learn (sklearn.dummy.DummyClassifier) to your data.
+At minimum, try the following two values for the ‘strategy’ parameter:
+‘stratified’ and ‘most_frequent’. Comment on your findings.
+
+5. Compare your best model that you built in step (2) to your best KNN
+model by evaluating them on the test set. Document your results and
+include the performance of your baseline systems from step (4) in your
+analysis for comparison.
+
+
+# of Instances 
+Class 1: 59
+Class 2: 71
+Class 3: 48
+
+# of Features 
+13

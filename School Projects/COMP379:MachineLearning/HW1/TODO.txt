@@ -1,0 +1,25 @@
+Must predict if passenger survived according to data
+
+File test.csv
+
+Headers: PassengerId (Int), Pclass (Int), Name (String), Sex (String, possible boolean), Age (Int), SibSp (Int), Parch (Int), Ticket (String), Fare (Double), Cabin (String), Embarked (Char)
+
+Absurd amount of if statements +/-
+
+EX:
+if age < some number: continue
+    else youre dead
+
+Will need to do for each feature, predictions are not weight based and therefore will
+
+
+Attributing weight to features
+
+
+I need a value at the end of every row for each index/pid
++= 1 to survival rate
+If survival rate is => some number, pass true to survived
+Else pass false
+
+Return PassengerId with Survived value  
+
